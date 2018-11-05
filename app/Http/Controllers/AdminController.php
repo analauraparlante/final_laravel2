@@ -5,7 +5,10 @@ namespace App\Http\Controllers;
 use App\Http\Requests;
 use Illuminate\Http\Request;
 
-class HomeController extends Controller
+use App\User;
+
+
+class AdminController extends Controller
 {
     /**
      * Create a new controller instance.
@@ -22,11 +25,8 @@ class HomeController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
-    {
-        return view('home');
-    }
-
     public function admin()
-    { return view('admin'); }
+    {
+		 return view('admin');
+    }
 }

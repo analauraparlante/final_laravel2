@@ -11,6 +11,8 @@
 |
 */
 
+Route::get('admin/routes', 'HomeController@admin')->middleware('admin');
+
 Route::get('/', [
    'uses' => 'HomeController@index',
      'as' => 'index'

@@ -15,9 +15,9 @@ class AdminMiddleware
      */
     public function handle($request, Closure $next)
     {
-         if (auth()->check() && auth()->user()->is_admin)
-        return $next($request);
-    
-        return $next($request);
+         if(auth()->user()->is_admin == 1){
+            return $next($request);
+            }
+            return redirect('home')->with('error','You have not admin access');
     }
 }
