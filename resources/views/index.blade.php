@@ -3,7 +3,6 @@
 <head>
 	<title>Librería speaker</title>
 	<meta charset="utf-8">
-	
 </head>
 <body>
 	<h1>Libros</h1>

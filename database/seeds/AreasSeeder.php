@@ -15,7 +15,7 @@ class AreasSeeder extends Seeder
         DB::table('areas')->delete();
         $area=array('Bases de datos', 
         	'Análisis funcional',
-        	'Programción',
+        	'Programación',
         	'Redes',
         	'Seguridad',
         	'Consultoría',

@@ -1,0 +1,19 @@
+.content-oferta {
+	background: #fff;
+	box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+	padding: 20px;
+    margin-bottom: 20px;
+}
+
+.ofert-title {
+	color: #009A9F;
+}
+
+.nav-admin {
+	text-align: right;
+	margin-right: 50px;
+}
+
+.nav-admin a {
+	margin-left: 20px;
+}

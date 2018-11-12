@@ -3,6 +3,7 @@
 namespace App\Http\Middleware;
 
 use Closure;
+use Illuminate\Support\Facades\Auth;
 
 class AdminMiddleware
 {
@@ -13,11 +14,25 @@ class AdminMiddleware
      * @param  \Closure  $next
      * @return mixed
      */
-    public function handle($request, Closure $next)
+   /* public function handle($request, Closure $next)
     {
          if(auth()->user()->is_admin == 1){
-            return $next($request);
+            return view('ofertas/panel');
             }
-            return redirect('home')->with('error','You have not admin access');
+            return redirect('/')->with('error','You have not admin access');
+    }*/
+
+    public function handle($request, Closure $next, $guard = null)
+    {
+        if(Auth::check())
+        {
+            if($request->user()->is_admin == 1)
+            {
+               return $next($request);
+            }
+             return redirect('/ofertas/panel');    
+        }
+
+        return redirect('/login');
     }
 }

@@ -14,10 +14,12 @@
     <!-- Styles -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
     {{-- <link href="{{ elixir('css/app.css') }}" rel="stylesheet"> --}}
+    <link href="/ofertas_laborales/public/css/style.css" rel="stylesheet"> 
 
     <style>
         body {
             font-family: 'Lato';
+            background: #f6f6f6;
         }
 
         .fa-btn {
@@ -71,6 +73,14 @@
             </div>
         </div>
     </nav>
+
+    @if ( Auth::check() && Auth::user()->is_admin)
+        <div class="nav-admin">
+            <?= link_to_route('ofertas.panel', 'Ofertas publicadas', []);?>
+
+            <?= link_to_route('usuarios.index', 'Usuarios', []);?>
+        </div> 
+    @endif
 
     @yield('content')
 
