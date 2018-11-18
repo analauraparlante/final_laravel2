@@ -4,10 +4,9 @@
 @section('content')
 <div class="container">
    
-    <h1>Listado de Ofertas reloaded</h1>
-    <p>Ofertas disponiblesss</p>
+    <h1>Listado de usuarios</h1>
 
-   <?= link_to_route('usuarios.nuevoForm', ' + Añadir un Usuario', [], ['class' => 'btn btn-success btn-lg active costado']);?>
+   <?= link_to_route('usuarios.nuevoForm', ' + Añadir un Usuario', [], ['class' => 'btn btn-success btn-lg active button-right button-agregar']);?>
 
     <table class="table table-bordered table-striped table-hover">
         <tr>
@@ -38,7 +37,7 @@
                 <td>{{ $unUsuario->password }}</td>
                 <td>{{ $unUsuario->created_at }}</td>
                 
-                <td><?= link_to_route('usuarios.editarForm', 'Editar', [$unUsuario->id], ['class' => 'btn btn-warning']);?></td>
+                <td><?= link_to_route('usuarios.editarForm', 'Editar', [$unUsuario->id], ['class' => 'btn button-agregar']);?></td>
                 <td>{{ Form::open(['route' => ['usuarios.eliminar', $unUsuario->id], 'method' => 'delete']) }}
 
                     <button class="btn btn-danger">Eliminar</span></button>

@@ -26,25 +26,10 @@ class UsuarioController extends Controller
 
      public function nuevo()
     {
-        $input = Input::all();
-
-         /*$datos= new User;
-        
-         $datos->name-> Input::get('name');
-         $datos->email-> Input::get('email');
-         $datos->password-> Input::get('password');
-         $datos->is_admin-> Input::get('is_admin');*/
-         
+        $input = Input::all();         
 
         $validator = Validator::make($input, Usuario::$rules);
-        //$user->password = Input::get('password');
-
-       /* public function setPasswordAttribute($pass){
-
-        $this->attributes['password'] = Hash::make($pass);
-
-        }*/
-
+      
         if($validator->fails()) {
             return redirect()
                 ->route('usuarios.nuevoForm')
@@ -58,7 +43,6 @@ class UsuarioController extends Controller
             ]);
         return redirect()->route('usuarios.index');
 }
-	
 	
 	
 

@@ -66,6 +66,17 @@ class OfertaController extends Controller
         ));
     }
 
+    public function veroferta($id)
+    {
+        $oferta = Oferta::findOrFail($id);
+        $area = Area::all()->pluck('area', 'id');
+
+        return view('ofertas/veroferta', compact(
+            'oferta',
+            'area'
+        ));
+    }
+
     public function editar($id)
     {
         $input = Input::all();

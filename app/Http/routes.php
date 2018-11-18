@@ -23,6 +23,11 @@ Route::get('/home', [
     'as' => 'ofertas.index'
 ]);
 
+Route::get('ofertas/panel/{id}/veroferta', [
+    'uses' => 'OfertaController@veroferta',
+    'as' => 'ofertas.veroferta'
+]);
+
 Route::get('ofertas', [
     'uses' => 'OfertaController@index',
     'as' => 'ofertas.index'

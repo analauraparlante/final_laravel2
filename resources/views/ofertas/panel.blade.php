@@ -4,22 +4,12 @@
 @section('content')
 <div class="container">
    
-    <h1>Listado de Ofertas reloaded</h1>
-    <p>Ofertas disponiblesss</p>
+    <h1>Listado de Ofertas</h1>
+<div class="buttonEliminar">buttoneliminar</div>
+<div class="buttonEliminar">buttoneliminar2</div>
 
-   <?= link_to_route('ofertas.nuevoForm', ' + Añadir una Oferta', [], ['class' => 'btn btn-success btn-lg active costado']);?>
-
+   <?= link_to_route('ofertas.nuevoForm', ' + Añadir una Oferta', [], ['class' => 'btn btn-success btn-lg active button-right button-agregar']);?>
     <table class="table table-bordered table-striped table-hover">
-       <!-- <tr>
-            <th>ID</th>
-            <th>Usuario</th>
-            <th>Título</th>
-            <th>Área</th>
-			<th>Oferta</th>
-
-            <th>Editar</th>
-            <th>Eliminar</th>
-        </tr>-->
 
         <?php $id=Auth::user()->id;
           $of=0;
@@ -47,7 +37,7 @@
 			    <td>{{ $unaOferta->titulo }}</td>
                 <td>{{ $unaOferta->area->area }}</td>
                 <td>{{ $unaOferta->oferta }}</td>
-                <td><?= link_to_route('ofertas.editarForm', 'Editar', [$unaOferta->id], ['class' => 'btn btn-warning']);?></td>
+                <td><?= link_to_route('ofertas.editarForm', 'Editar', [$unaOferta->id], ['class' => 'btn button-agregar buttonEliminar']);?></td>
                 <td>{{ Form::open(['route' => ['ofertas.eliminar', $unaOferta->id], 'method' => 'delete']) }}
 
                     <button class="btn btn-danger">Eliminar</span></button>
@@ -74,12 +64,14 @@
                     <td>{{ $unaOferta->titulo }}</td>
                     <td>{{ $unaOferta->area->area }}</td>
                     <td>{{ $unaOferta->oferta }}</td>
-                    <td><?= link_to_route('ofertas.editarForm', 'Editar', [$unaOferta->id], ['class' => 'btn btn-warning']);?></td>
+                    <td><?= link_to_route('ofertas.editarForm', 'Editar', [$unaOferta->id], ['class' => 'btn btn-warning ']);?></td>
                     <td>{{ Form::open(['route' => ['ofertas.eliminar', $unaOferta->id], 'method' => 'delete']) }}
 
-                        <button class="btn btn-danger">Eliminar</span></button>
+                        <button class="btn btn-danger">Eliminar</button>
                     {{ Form::close() }}</td>
                 </tr>
+
+
             <?php } } ?>
         @endforeach
 

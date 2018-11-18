@@ -6,7 +6,7 @@
 }
 
 .ofert-title {
-	color: #009A9F;
+	color: #16c1f3;
 }
 
 .nav-admin {
@@ -17,3 +17,121 @@
 .nav-admin a {
 	margin-left: 20px;
 }
+
+.button-right {
+    margin-bottom: 20px;
+    float: right;
+}
+
+.container-header {
+	padding-top: 5px;
+    padding-bottom: 5px;
+}
+
+.navbar-brand {
+	padding: 0 !important;
+}
+
+.content-form {
+	width: 500px;
+	margin: auto;
+	background: #fff;
+	padding: 15px;
+	box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
+}
+
+.content-form h2{
+	text-align: center;
+}
+
+.content-form .form-group {
+	width: 80%;
+    margin: auto;
+    margin-bottom: 20px;
+}
+
+.content-form .btn-primary {
+	width: 100%;
+	background: #16c1f3;
+	border-color: #16c1f3;
+}
+
+.content-form-action {
+	width: 80%;
+	margin: auto;
+	margin-top: 30px;
+	margin-bottom: 50px;
+	background: #fff;
+	padding: 25px;
+	box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
+}
+
+.content-form-action h2{
+	text-align: center;
+	margin-bottom: 30px;
+}
+
+.form-action-button {
+	text-align: right;
+}
+
+.form-action-button .btn-success {
+	background: #16c1f3; 
+	border-color: #16c1f3;
+}
+
+.form-action-button .btn-success:hover {
+	background: #3399cc; 
+	border-color: #3399cc;
+}
+
+.container .button-agregar {
+	background-color: #16c1f3; 
+	border-color: #16c1f3;
+	color: #fff;
+}
+
+.container .button-agregar:hover {
+	background: #3399cc; 
+	border-color: #3399cc;
+}
+
+.form-group #password {
+    display: block;
+    width: 100%;
+    height: 34px;
+    padding: 6px 12px;
+    font-size: 14px;
+    line-height: 1.42857143;
+    color: #555;
+    background-color: #fff;
+    background-image: none;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.form-group select {
+	margin-bottom: 20px !important;
+}
+
+.content-oferta {
+	position: relative;
+}
+
+.oferta-truncate {
+	width: 100%;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.button-ver-oferta{
+	position: absolute;
+	top: 20px;
+	right: 20px;
+}
+
+.button-volver {
+	text-align: right;
+}
+
